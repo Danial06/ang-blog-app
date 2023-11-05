@@ -1,5 +1,5 @@
 ## Preview Site Hosted At
-[ang-blog-b9ef4.web.app](https://ang-blog-b9ef4.web.app/)
+https://lcuuniverse.web.app/
 
 # AngBlogApp
 
