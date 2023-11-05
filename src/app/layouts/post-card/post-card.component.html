@@ -1,15 +1,14 @@
-<div class="card">
-    <img src="https://images.unsplash.com/photo-1698029021587-b8640c0532b9?auto=format&fit=crop&q=60&w=500&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHx0b3BpYy1mZWVkfDl8Qm4tRGpyY0Jyd298fGVufDB8fHx8fA%3D%3D"
-        class="card-img-top" alt="pos-card">
+<div class="card" *ngIf="postCard" [routerLink]="['/post',postCard.id]">
+
+    <img src={{postCard.postImgPath}} class="card-img-top" alt="pos-card" style="height: 250;">
     <div class="card-body">
-        <small class="bg-light text-danger text-center">Design</small>
+        <small class="bg-light text-danger text-center">{{postCard.category.category}}</small>
         <small class="bg-light text-success text-center ml-3">Featured</small>
-        <small class="bg-light text-info text-center ml-3">6 Views </small>
+        <small class="bg-light text-info text-center ml-3"> {{postCard.views}} - Views </small>
 
-        <h5 class="mt-1">How to be Productive 101?</h5>
-        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
-            content.</p>
+        <h5 class="mt-1">{{postCard.title}}</h5>
+        <p class="card-text ">{{postCard.excerpt}}</p>
 
-        <small class="bg-light text-warning text-center">Last Updated 6 mins ago</small>
+        <small class="bg-light text-warning text-center">Last Updated at- {{postCard.createdAt.toMillis()|date}}</small>
     </div>
 </div>

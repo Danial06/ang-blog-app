@@ -17,6 +17,15 @@ import { CommentListComponent } from './comments/comment-list/comment-list.compo
 import { AboutUsComponent } from './pages/about-us/about-us.component';
 import { PostCardComponent } from './layouts/post-card/post-card.component';
 
+// import { AngularFireDatabaseModule } from '@angular/fire/compat/database'; //all these imports for firebase
+import { initializeApp, provideFirebaseApp } from '@angular/fire/app';
+import { provideFirestore, getFirestore } from '@angular/fire/firestore'
+
+
+
+
+import { environment } from 'src/environments/environment.development'
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -32,11 +41,14 @@ import { PostCardComponent } from './layouts/post-card/post-card.component';
     CommentForComponent,
     CommentListComponent,
     AboutUsComponent,
-    PostCardComponent
+    PostCardComponent,
+
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    provideFirebaseApp(() => initializeApp(environment.firebase)),
+    provideFirestore(() => getFirestore())
   ],
   providers: [],
   bootstrap: [AppComponent]

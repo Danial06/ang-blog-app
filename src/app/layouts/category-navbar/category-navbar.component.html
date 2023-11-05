@@ -2,14 +2,11 @@
     <div class="container">
 
         <div class="collapse navbar-collapse justify-content-center">
-            <ul class="navbar-nav">
-                <li class="nav-item"><a href="" class="nav-link">Kaidhi</a></li>
-                <li class="nav-item"><a href="" class="nav-link">Vikram </a> </li>
-                <li class="nav-item"><a href="" class="nav-link">Leo</a></li>
-                <li class="nav-item"><a href="" class="nav-link">kaidhi-2</a></li>
-                <li class="nav-item"><a href="" class="nav-link">Vikram-2</a></li>
-                <li class="nav-item"><a href="" class="nav-link">Leo-2</a></li>
-                <li class="nav-item"><a href="" class="nav-link">LCU</a></li>
+            <ul class="navbar-nav" *ngFor="let Eachcat of categoryNavbar;let i =index">
+                <li class="nav-item"><a href="" class="nav-link"
+                        [routerLink]="['/category',Eachcat.id]">{{Eachcat.category}}</a>
+                </li>
+
             </ul>
 
         </div>
