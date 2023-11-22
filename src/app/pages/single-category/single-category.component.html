@@ -1,15 +1,25 @@
 <div class="bg-theme p-5">
     <div class="container">
         <h1 class="text-white">A Sambavam By Loki</h1>
-        <p class="text-white">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Neque dolorum quam ut suscipit
+        <p class="text-white">Kaadu nu onnu irundha andha kaatuku raja nu orthar venum
         </p>
     </div>
 </div>
-<div class="container mt-5 mb-5">
+<div class="container mt-5 mb-5" *ngIf="arrCategoryPosts.length>0">
 
     <div class="row">
         <div class="col-md-4 mb-3" *ngFor="let post of arrCategoryPosts">
             <app-post-card [postCard]="post"></app-post-card>
+        </div>
+
+    </div>
+</div>
+<div class="container mt-5 mb-5" *ngIf="arrCategoryPosts.length==0">
+
+    <div class="row">
+        <div class="col-md-12 text-center text-white">
+            <h3>Olunga Cook panna vidunga da</h3>
+            <img src="..\assets\giphy.gif" alt="text">
         </div>
 
     </div>

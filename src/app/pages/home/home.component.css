@@ -3,5 +3,7 @@
     padding-left: 130px;
     padding-right: 130px;
     padding-bottom: 130px;
-    background-color: var(--primary-color);
+    /* background-color: var(--primary-color);*/
 }
+
+.latest-post {}
